@@ -4,7 +4,7 @@
 set -euo pipefail
 
 # Configuración
-PROJECT_NAME="cluster_openshift"
+PROJECT_NAME="cluster_k3s"
 KEY_NAME="id_rsa_shared_cluster"
 SSH_EMAIL="vhgalvez@gmail.com"
 SSH_DIR="/root/.ssh/${PROJECT_NAME}/shared"
