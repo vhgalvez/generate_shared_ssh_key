@@ -1,3 +1,4 @@
+
 # 🔐 generate_shared_ssh_key.sh
 
 Este script genera una **clave SSH compartida** para ser utilizada con todas tus máquinas virtuales del clúster (Flatcar, CoreOS, etc.).
@@ -51,11 +52,35 @@ Usa un playbook para distribuir la nueva clave a todas las VMs en `/home/core/.s
 
 ---
 
+## 🔑 Acceso SSH a los Nodos Flatcar con Clave Compartida
+
+Para acceder a una VM (por ejemplo `master1`) utilizando la clave compartida generada, ejecuta el siguiente comando:
+
+```bash
+ssh -i /root/.ssh/cluster_k3s/shared/id_rsa_shared_cluster core@10.17.4.21
+```
+
+### 🔐 Asegúrate de lo siguiente:
+
+- ✅ El usuario `core` **existe** en la VM (por defecto en Flatcar).
+- ✅ La **clave pública** correspondiente a la privada ha sido añadida al archivo:
+
+```bash
+/home/core/.ssh/authorized_keys
+```
+
+- ✅ Los **permisos** de la clave privada están correctamente configurados:
+
+```bash
+chmod 600 /root/.ssh/cluster_k3s/shared/id_rsa_shared_cluster
+```
+
+---
+
 ## ✍️ Autor
 
 - ✉️ [vhgalvez@gmail.com](mailto:vhgalvez@gmail.com)
 - 🛠️ Proyecto: `cluster_openshift`
-
 
 ---
 
