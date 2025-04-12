@@ -55,3 +55,12 @@ Usa un playbook para distribuir la nueva clave a todas las VMs en `/home/core/.s
 
 - ✉️ [vhgalvez@gmail.com](mailto:vhgalvez@gmail.com)
 - 🛠️ Proyecto: `cluster_openshift`
+
+
+---
+
+## 🌐 Proyecto Principal
+
+Este script forma parte del proyecto [FlatcarMicroCloud](https://github.com/vhgalvez/FlatcarMicroCloud), una infraestructura automatizada basada en K3s, Flatcar Linux, Terraform y Ansible.
+
+¡Échale un vistazo para ver cómo se integra todo! 🚀
